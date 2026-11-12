@@ -8,7 +8,7 @@ var hbs = require('hbs');
 var indexRouter = require('./app_server/routes/index');
 var usersRouter = require('./app_server/routes/users');
 var travelRouter = require('./app_server/routes/travel');
-
+require('./app_server/models/db');
 var app = express();
 
 // view engine setup
@@ -45,4 +45,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-require('./app_server/models/db');
